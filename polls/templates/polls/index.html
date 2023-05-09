@@ -1,0 +1,37 @@
+{% extends 'polls/base.html' %} 
+{% block main_content %}
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Latest Polls</h3>
+            </div>
+            <ul class="list-group list-group-flush">
+                {% for question in latest_questions %}
+                    <li class="list-group-item">
+                        <a href="{% url 'polls:detail' question.id %}">{{ forloop.counter }}. {{ question.question_text }}</a>
+                    </li>
+                {% empty %}
+                    <li class="list-group-item">No polls available.</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Popular Polls</h3>
+            </div>
+            <ul class="list-group list-group-flush">
+                {% for poll in popular_poll %}
+                    <li class="list-group-item">
+                        <a href="{% url 'polls:detail' poll.id %}">{{ forloop.counter }}. {{ poll.question_text }}</a>
+                    </li>
+                {% empty %}
+                    <li class="list-group-item">No polls available.</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

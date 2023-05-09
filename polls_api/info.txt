@@ -1,0 +1,46 @@
+Fully functional CRUD Django REST API.
+
+How to add data through http://127.0.0.1:8000/polls-detail/api/
+{
+    "poll": "New Poll Question ?",
+    "completed": false
+}
+
+Next API endpoint http://127.0.0.1:8000/todos/api/<id>/
+
+You can use GET,POST,PUT,DELETE
+=============================================================================================================================================================
+Here are some important concepts to consider when building a fully functional CRUD Django REST API:
+
+1. Serializers: Serializers are used to convert complex data types, such as Django models, into a format that can be easily rendered into JSON or XML, and vice versa. They act as a bridge between the database and the views. Django REST Framework provides a powerful serializer framework that enables easy serialization of complex data types.
+
+2. Views: Views are responsible for processing incoming requests and generating the appropriate HTTP responses. In Django REST Framework, views are based on function-based views or class-based views, and they can be customized to handle various HTTP methods (GET, POST, PUT, DELETE, etc.).
+
+3. URLs: URLs map incoming requests to their corresponding views. In Django REST Framework, you can define URLs using the urlpatterns list in the urls.py file. You can also use routers to automatically generate URLs for your views.
+
+4. Authentication and Permissions: Django REST Framework provides a number of authentication and permission classes that allow you to restrict access to your API. You can use token-based authentication, session-based authentication, or implement your own custom authentication mechanism. Similarly, you can define permissions that control who can access the different endpoints of your API.
+
+5. Pagination: If your API returns a large number of records, it is a good practice to add pagination to the response. Django REST Framework provides built-in pagination classes that can be easily integrated into your views.
+
+6. Testing: Writing tests for your API is crucial to ensure that it works as expected. Django REST Framework provides tools to create and run tests, such as the APITestCase class and the APIClient class.
+
+
+=============================================================================================================================================================
+
+An API endpoint is a URL that a client application, such as a web or mobile application, can use to interact with an API. The endpoint specifies where the resource is located and the type of request that the client wants to perform. For example, an API endpoint might be used to retrieve data from a server, to submit data to a server, or to update or delete data on a server.
+
+API endpoints typically follow a standardized naming convention, such as using HTTP verbs (e.g. GET, POST, PUT, DELETE) to indicate the type of operation being performed, and a path that identifies the resource being accessed or modified. For example, an API endpoint to retrieve a list of users might be: GET /users/.
+
+To connect your API to another application, you can provide the API endpoint URL to the developers of the other application. They can then use this URL to make requests to your API and retrieve data or perform actions.
+
+There are various ways to expose your API endpoint URL to the other developers:
+
+Provide documentation: You can provide documentation for your API that includes the endpoint URLs and other information about how to use your API.
+
+Use API keys: You can use API keys to authenticate requests to your API. You can provide the other developers with an API key that they can use to make requests to your API.
+
+Use OAuth: You can use OAuth to allow other applications to access your API on behalf of a user. With OAuth, users can grant permission to the other application to access their data in your API.
+
+Use webhooks: You can use webhooks to send data from your API to another application in real-time. You can provide the other application with a webhook URL that they can use to receive data from your API.
+
+These are some of the ways to connect your API to another application. The method you choose depends on your use case and requirements.

@@ -1,0 +1,32 @@
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+</head>
+  <body>
+    <h1>About</h1>
+    <p>Welcome to our website, where you can create polls and know people's opinions around the world.</p>
+    <h2>Our Mission</h2>
+    <p>Our mission is to provide a platform for people to voice their opinions and share their perspectives with the world. We believe that everyone's opinion matters and that by listening to each other, we can gain a better understanding of the world around us.</p>
+    <h2>Our Team</h2>
+    <p>We are a team of passionate individuals who are dedicated to creating a better world through open communication and dialogue. Our team is made up of people from all walks of life, and we believe that diversity is our strength.</p>
+    <ul>
+        <strong>
+      <li>aioont - github.com/aioont - Backend developer</li>
+      <li>aswin - github.com/aswin531 - Frontend developer</li>
+        </strong>
+    </ul>
+    <a href="{% url 'polls:index' %}" class="btn center">Goto homepage</a>
+    <h2>Contact Us</h2>
+    <p>If you have any questions, comments, or concerns, please don't hesitate to reach out to us. We'd love to hear from you!</p>
+    <ul>
+      <li>Email: aioont8@gmail.com</li>
+      <li>Phone: 1234567890</li>
+      <li>Address: Kochi, Kerala, India</li>
+    </ul>
+  </body>
+</html>

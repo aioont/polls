@@ -1,0 +1,415 @@
+body {
+    background-color: #bacdff;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+p {
+    margin: 20px 10px;
+    text-align: justify;
+}
+
+ul {
+    margin: 20px 0;
+    padding: 0 0 0 40px;
+    list-style: none;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+}
+
+hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #eee;
+  }
+  
+  a {
+    color: #000000;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+  
+  a:hover {
+    color: #000;
+  }
+  
+  /* Style for the heading */
+  h3 {
+    color: #333;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  /* Style for the paragraph */
+  p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  /* Style for the horizontal line */
+  hr {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: none;
+    border-top: 2px solid #ccc;
+  }
+  
+ 
+
+  .btn {
+    display: inline-block;
+    margin-top: 20px !important;
+    padding: 10px 40px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: large;
+    border-radius: 8px;
+  }
+  
+  .btn:hover {
+    background-color: #1984f7;
+  }
+  
+  /* Style for the footer */
+  footer {
+    margin-top: 50px;
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+  } 
+
+/* Style for navigation links */
+.nav-link {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 18px;
+    color: #ffffff;
+    text-decoration: none;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+  }
+  
+  .nav-link:hover {
+    border-bottom-color: #ffb7b7;
+  }
+
+  .navigation {
+    display: flex;
+    max-width: 75%;
+    justify-content: center;
+    align-items: center;
+    background-color: #292727;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 auto;
+  }
+  
+.center {
+    display: flex;
+    max-width: 75%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+  
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+input[type="radio"]:checked {
+  border-color: #0a0a0a;
+  background-color: #454545;
+}
+
+input[type="radio"]:hover {
+  border-color: #666;
+}
+
+label {
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: bold;
+}
+
+form {
+  text-align: center;
+}
+
+
+input[type="text"] {
+  margin: 5px;
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+#options {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+#options div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#options div label {
+  margin-right: 10px;
+}
+
+#add-option {
+  margin: 10px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+#add-option:hover {
+  background-color: #0069d9;
+}
+
+button[type="submit"] {
+  margin: 10px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  background-color: #28a745;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+#error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.actions.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.actions.center a {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.actions.center a.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+}
+
+.actions.center a.btn-primary:hover {
+  background-color: #0062cc;
+}
+
+.actions.center a.btn-secondary {
+  background-color: #f8f9fa;
+  color: #343a40;
+  border: 2px solid #343a40;
+}
+
+.actions.center a.btn-secondary:hover {
+  background-color: #343a40;
+  color: #fff;
+  border: 2px solid #343a40;
+}
+
+  /* Style for the table */
+  table {
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  /* Style for the table headings */
+  th {
+    background-color: #9fc8a8;
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+    width: 30%;
+  }
+  
+  /* Style for the table data */
+  td {
+    border: 1px solid #7b7b7b;
+    background-color: azure;
+    padding: 8px;
+    width: 70%;
+  }
+  
+  /* Style for the choice rows */
+  .choice td:first-child {
+    font-weight: bold;
+    width: 10%;
+  }
+  
+  /* Style for the vote count column */
+  .choice td:last-child {
+    font-weight: bold;
+    width: 20%;
+  }
+
+  footer {
+    background-color: #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+
+
+
+  .slideshow {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    border: 1px solid #ccc; /* add a border to the slideshow container */
+}
+
+.slides {
+    display: flex;
+    position: absolute;
+    width: calc(100% - 20px); /* subtract 20px from the width to create space between the slides */
+    height: calc(100% - 20px); /* subtract 20px from the height to create space between the slides */
+    top: 10px; /* add 10px top padding to create space between the top edge of the container and the slides */
+    left: 10px; /* add 10px left padding to create space between the left edge of the container and the slides */
+    right: 10px; /* add 10px right padding to create space between the right edge of the container and the slides */
+    bottom: 10px; /* add 10px bottom padding to create space between the bottom edge of the container and the slides */
+    animation-name: slide;
+    animation-duration: 16s;
+    animation-iteration-count: infinite;
+}
+
+.slides img {
+    
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 20px solid #fff; /* add a border to the images */
+    border-radius: 20px;
+    margin: 10px 10px 10px 10px;
+}
+
+@keyframes slide {
+  0% {
+      transform: translateX(0%);
+  }
+  5% {
+      transform: translateX(20%);
+  }
+  15% {
+      transform: translateX(40%);
+  }
+  20.% {
+      transform: translateX(60%);
+  }
+  25% {
+      transform: translateX(80%);
+  }
+  30% {
+      transform: translateX(-30%);
+  }
+}
+
+.card {
+  display: block;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+  
+}
+
+.card h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.card ul {
+  margin-left: 20px;
+  padding-left: 0;
+}
+
+.card li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.card a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}

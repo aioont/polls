@@ -1,0 +1,44 @@
+{% load static %}
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <style>
+.button {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    padding: 12px 24px;
+    background-color: #0fdb03;
+    color: #000000;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.button:hover {
+  background-color: #fffb28;
+}
+
+    </style>
+  </head>
+  <body>
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you! Please use the form below to get in touch:</p>
+    <a href="mailto:aioont8@gmail.com" class="button">Leave a message</a>
+
+    <a href="{% url 'polls:index' %}" class="btn center">Goto homepage</a>
+    <h2>Contact</h2>
+    <p>If you have any questions, comments, or concerns, please don't hesitate to reach out to us. We'd love to hear from you!</p>
+    <ul>
+      <li>Github: <a href="https://www.github.com/aioont"><u>@aioont</u></a></li>
+      <li>Email: aioont8@gmail.com</li>
+      <li>Phone: 1234567890</li>
+      <li>Address: Kochi, Kerala, India</li>
+    </ul>
+
+  </body>
+</html>

@@ -1,0 +1,52 @@
+{% load static %}
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/form.css' %}">
+</head>
+{% block content %}
+  <h1>Create a Poll</h1>
+  <form method="post">
+    {% csrf_token %}
+    <div>
+      <label for="question_text">Question:</label>
+      <input type="text" id="question_text" name="question_text">
+    </div>
+    <div id="options">
+      <div>
+        <label for="choice_text_1">Option 1:</label>
+        <input type="text" id="choice_text_1" name="choice_text_1">
+      </div>
+      <div>
+        <label for="choice_text_2">Option 2:</label>
+        <input type="text" id="choice_text_2" name="choice_text_2">
+      </div>
+    </div>
+    <input type="hidden" id="option_count" name="option_count" value="2">
+    <button type="button" id="add-option">Add Option</button>
+    <button type="submit">Create Poll</button>
+  </form>
+  <script>
+    const addOptionButton = document.getElementById('add-option');
+    const optionsDiv = document.getElementById('options');
+    let optionCount = 2;
+    const optionCountInput = document.getElementById('option_count');
+    
+    addOptionButton.addEventListener('click', () => {
+      const optionDiv = document.createElement('div');
+      optionCount++;
+      const label = document.createElement('label');
+      label.for = `choice_text_${optionCount}`;
+      label.innerText = `Option ${optionCount}:`;
+      const input = document.createElement('input');
+      input.type = 'text';
+      input.id = `choice_text_${optionCount}`;
+      input.name = `choice_text_${optionCount}`;
+      optionDiv.appendChild(label);
+      optionDiv.appendChild(input);
+      optionsDiv.appendChild(optionDiv);
+      optionCountInput.value = optionCount;
+    });
+  </script>
+
+{% endblock %}

@@ -1,0 +1,65 @@
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <script>
+        // optional - pause on hover
+const carousel = document.querySelector('.carousel');
+carousel.addEventListener('mouseover', () => {
+  carousel.style.animationPlayState = 'paused';
+});
+carousel.addEventListener('mouseout', () => {
+  carousel.style.animationPlayState = 'running';
+});
+
+    </script>
+</head> 
+
+<body>
+    <div class="navigation">
+        <a href="{% url 'polls:index' %}" class="nav-link">Home</a>
+        <a href="{% url 'polls:about' %}" class="nav-link">About</a>
+        <a href="{% url 'polls:contact' %}" class="nav-link">Contact</a>
+        <a href="{% url 'polls-detail:api' %}" class="nav-link">Polls Detail API</a>
+
+        {% if not user.is_authenticated %}
+            <a href="{% url 'polls:login' %}" class="nav-link">Login</a>
+            <a href="{% url 'polls:register' %}" class="nav-link">Signup</a>
+        {% else %}
+            <a href="{% url 'polls:logout' %}" class="nav-link">Logout</a>
+        {% endif %}
+
+
+
+    </div>
+    
+    <div class="slideshow">
+        <div class="slides">
+            <img src="{% static 'img/img1.jpg' %}" alt="image1">
+            <img src="{% static 'img/img2.jpg' %}" alt="image2">
+            <img src="{% static 'img/img3.jpg' %}" alt="image3">
+            <img src="{% static 'img/img4.jpg' %}" alt="image4">
+        </div>
+    </div>
+    
+      
+    <h3 class="heading-primary">Welcome to Polls</h3>
+    <p class="paragraph">Create polls and know people's opinion around the world. With Polls, you can create and share your own polls with people from around the world, and discover what others think about important topics. Whether you're looking to gather opinions on a new product or service, or simply curious about what people think about the latest news and trends, Polls has got you covered. So why wait? Sign up today and start creating polls that capture the opinions of people from all walks of life!</p>
+
+    <hr>
+
+    <div class="actions center">
+        <a href="{% url 'polls:createpoll' %}" class="btn-primary">Create a poll</a>
+        <a href="{% url 'polls:viewpolls'  %}" class="btn-secondary">View my polls</a>
+    </div>
+
+    <hr>
+
+    {% block main_content %}
+    {% endblock %}
+
+    {% include "polls/footer.html" %}
+</body>
+</html>

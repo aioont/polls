@@ -1,0 +1,24 @@
+{% load static %}
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head> 
+
+
+<h1>Polls and votes</h1>
+
+{% for question in questions %}
+  <table class="question">
+    <tr>
+      <th colspan="3">Question {{ forloop.counter }}: {{ question.question_text }}</th>
+
+    </tr>
+    {% for choice in question.choice_set.all %}
+      <tr class="choice">
+        <td>Choice {{ forloop.counter }}:</td>
+        <td>{{ choice.choice_text }}</td>
+        <td>{{ choice.votes }} votes</td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endfor %}
